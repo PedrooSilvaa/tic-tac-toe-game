@@ -8,6 +8,7 @@ var jgSeis = "";
 var jgSete = "";
 var jgOito = "";
 var jgNove = "";
+var ganhador = ''
 
 function PlayUm(){
     jgUm = document.getElementById('um').innerText;
@@ -158,4 +159,62 @@ function PlayNove() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayNove clicked");
+}
+
+function Reset(){
+    document.getElementById('um').innerText = "";
+    document.getElementById('dois').innerText = "";
+    document.getElementById('tres').innerText = "";
+    document.getElementById('quatro').innerText = "";
+    document.getElementById('cinco').innerText = "";
+    document.getElementById('seis').innerText = "";
+    document.getElementById('sete').innerText = "";
+    document.getElementById('oito').innerText = "";
+    document.getElementById('nove').innerText = "";
+}
+
+function VerificationWin(){
+    // d
+    // 123
+    // 456
+    // 789
+
+    if(jgUm == jgDois && jgDois == jgTres){
+        ganhador == jgUm;
+    }
+
+    if(jgQuatro == jgCinco && jgCinco == jgSeis){
+        ganhador == jgQuatro;
+    }
+
+    if(jgSete == jgOito && jgOito == jgNove){
+        ganhador == jgSete;
+    }
+    // p
+    // 147
+    // 258
+    // 369
+    
+    if(jgUm == jgQuatro && jgQuatro == jgSete){
+        ganhador == jgUm;
+    }
+
+    if(jgDois == jgCinco && jgCinco == jgOito){
+        ganhador == jgDois;
+    }
+
+    if(jgTres == jgSeis && jgSeis == jgNove){
+        ganhador == jgTres;
+    }
+    // c
+    // 159
+    // 357
+    
+    if(jgUm == jgCinco && jgCinco == jgNove){
+        ganhador == jgUm;
+    }
+
+    if(jgTres == jgCinco && jgCinco == jgSete){
+        ganhador == jgTres;
+    }
 }

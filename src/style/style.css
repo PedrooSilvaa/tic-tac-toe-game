@@ -9,6 +9,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #1b2d35;
     height: 100vh;
 }
@@ -31,4 +32,11 @@ main{
     font-weight: 700;
     font-size: 60px;
     cursor: pointer;
+}
+
+button{
+    font-size: 20px;
+    padding: 10px;
+    background-color: #a8bec9;
+    
 }
