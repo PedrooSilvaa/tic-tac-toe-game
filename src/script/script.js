@@ -287,5 +287,4 @@ function VerificationWin(){
         document.getElementById("placarTie").innerText = "placar tie \n" + placarTie;
         Reset();
     }
-
 }
