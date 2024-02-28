@@ -13,7 +13,19 @@ var jogadas = 0;
 var placarX = 0;
 var placarTie = 0;
 var placarO = 0;
+var modo = 1;
 
+function ModoDupla(){
+    modo = 1;
+    document.getElementById("modoUm").style.backgroundColor = "#31c4be";
+    document.getElementById("modoDois").style.backgroundColor = "#a8bec9"
+}
+
+function ModoRobo(){
+    modo = 2;
+    document.getElementById("modoDois").style.backgroundColor = "#31c4be";
+    document.getElementById("modoUm").style.backgroundColor = "#a8bec9"
+}
 
 function PlayUm(){
     jgUm = document.getElementById('um').innerText;
@@ -300,3 +312,6 @@ function Quit(){
     document.getElementById("quiter").style.display = 'flex';
 
 }
+
+
+3

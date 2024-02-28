@@ -136,3 +136,21 @@ button{
 .local-winner  h1, .local-quiter{
     padding: 20px 0;
 }
+
+.modo {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 320px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+ 
+.modo button {
+    width: 100px;
+}
+
+#modoUm {
+    background-color: #31c4be;
+}
