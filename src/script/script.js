@@ -48,6 +48,7 @@ function PlayUm(){
             jgUm = jogador;
             document.getElementById('um').innerText = jgUm;
             jogadas++;
+            VerificationWin();
             if(jogador == "X"){
                 jogador = "O";
             }else {
@@ -59,7 +60,6 @@ function PlayUm(){
   
         }
     console.log("PlayUm clicked");
-    VerificationWin();
 }
 
 function PlayDois() {
@@ -69,6 +69,7 @@ function PlayDois() {
         jgDois = jogador;
         document.getElementById('dois').innerText = jgDois;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -79,7 +80,6 @@ function PlayDois() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayDois clicked");
-    VerificationWin();
 }
 
 function PlayTres() {
@@ -89,6 +89,7 @@ function PlayTres() {
         jgTres = jogador;
         document.getElementById('tres').innerText = jgTres;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -99,7 +100,6 @@ function PlayTres() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayTres clicked");
-    VerificationWin();
 }
 
 function PlayQuatro() {
@@ -109,6 +109,7 @@ function PlayQuatro() {
         jgQuatro = jogador;
         document.getElementById('quatro').innerText = jgQuatro;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -119,7 +120,6 @@ function PlayQuatro() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayQuatro clicked");
-    VerificationWin();
 }
 
 function PlayCinco() {
@@ -129,6 +129,7 @@ function PlayCinco() {
         jgCinco = jogador;
         document.getElementById('cinco').innerText = jgCinco;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -139,7 +140,6 @@ function PlayCinco() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayCinco clicked");
-    VerificationWin();
 }
 
 function PlaySeis() {
@@ -149,6 +149,7 @@ function PlaySeis() {
         jgSeis = jogador;
         document.getElementById('seis').innerText = jgSeis;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -159,7 +160,6 @@ function PlaySeis() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlaySeis clicked");
-    VerificationWin();
 }
 
 function PlaySete() {
@@ -169,6 +169,7 @@ function PlaySete() {
         jgSete = jogador;
         document.getElementById('sete').innerText = jgSete;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -179,7 +180,6 @@ function PlaySete() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlaySete clicked");
-    VerificationWin();
 }
 
 function PlayOito() {
@@ -189,6 +189,8 @@ function PlayOito() {
         jgOito = jogador;
         document.getElementById('oito').innerText = jgOito;
         jogadas++;
+        VerificationWin();
+
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -199,7 +201,6 @@ function PlayOito() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayOito clicked");
-    VerificationWin();
 }
 
 function PlayNove() {
@@ -209,6 +210,7 @@ function PlayNove() {
         jgNove = jogador;
         document.getElementById('nove').innerText = jgNove;
         jogadas++;
+        VerificationWin();
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -219,7 +221,6 @@ function PlayNove() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayNove clicked");
-    VerificationWin();
 }
 
 function Reset(){
@@ -250,20 +251,20 @@ function VerificationWin(){
     // 123
     // 456
     // 789
-    if(jgUm != ""){
-        if(jgUm == jgDois && jgDois == jgTres){
+    if(jgUm == jgDois && jgDois == jgTres){
+        if(jgUm != ""){
             ganhador = jgUm;
         }
     }
         
-    if(jgQuatro != ""){
-        if(jgQuatro == jgCinco && jgCinco == jgSeis){
+    if(jgQuatro == jgCinco && jgCinco == jgSeis){
+        if(jgQuatro != ""){
             ganhador = jgQuatro;
         }
     }
 
-    if(jgSete != ""){     
-        if(jgSete == jgOito && jgOito == jgNove){
+    if(jgSete == jgOito && jgOito == jgNove){
+        if(jgSete != ""){     
             ganhador = jgSete;
         }
     }
@@ -272,20 +273,20 @@ function VerificationWin(){
     // 258
     // 369
 
-    if(jgUm != ""){
-        if(jgUm == jgQuatro && jgQuatro == jgSete){
+    if(jgUm == jgQuatro && jgQuatro == jgSete){
+        if(jgUm != ""){
             ganhador = jgUm;
         }
     }
 
-    if(jgDois != ""){
-        if(jgDois == jgCinco && jgCinco == jgOito){
+    if(jgDois == jgCinco && jgCinco == jgOito){
+        if(jgDois != ""){
             ganhador = jgDois;
         }
     }
 
-    if(jgTres != ""){
-        if(jgTres == jgSeis && jgSeis == jgNove){
+    if(jgTres == jgSeis && jgSeis == jgNove){
+        if(jgTres != ""){
             ganhador = jgTres;
         }
     }
@@ -293,14 +294,14 @@ function VerificationWin(){
         // 159
         // 357
 
-    if(jgUm != ""){
-        if(jgUm == jgCinco && jgCinco == jgNove){
+    if(jgUm == jgCinco && jgCinco == jgNove){
+        if(jgUm != ""){
             ganhador = jgUm;
         }
     }
 
-    if(jgTres != ""){
-        if(jgTres == jgCinco && jgCinco == jgSete){
+    if(jgTres == jgCinco && jgCinco == jgSete){
+        if(jgTres != ""){
             ganhador = jgTres;
         }
     }
@@ -661,7 +662,8 @@ if(modo == 2){
             jogadas++; 
             jogador = "X";
         } 
-        VerificationWin();
     }
+    
+    VerificationWin();
 }
 } 
