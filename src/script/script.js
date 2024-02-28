@@ -10,6 +10,10 @@ var jgOito = "";
 var jgNove = "";
 var ganhador = "";
 var jogadas = 0;
+var placarX = 0;
+var placarTie = 0;
+var placarO = 0;
+
 
 function PlayUm(){
     jgUm = document.getElementById('um').innerText;
@@ -265,13 +269,22 @@ function VerificationWin(){
         }
     }
     if(ganhador != ""){
-        alert("Parabéns vc foi o vencendor " + ganhador)
+        alert("Parabéns vc foi o vencendor " + ganhador);
+        if(ganhador == "X"){
+        placarX++
+        document.getElementById("placarX").innerText = "placar x \n" + placarX;
+        }else{
+        placarO++;
+        document.getElementById("placarO").innerText = "placar o \n" + placarO;
+        }
         ganhador = "";
         Reset();
     }
 
     if(jogadas == 9 & ganhador == ""){
         alert("Empate");
+        placarTie++;
+        document.getElementById("placarTie").innerText = "placar tie \n" + placarTie;
         Reset();
     }
 

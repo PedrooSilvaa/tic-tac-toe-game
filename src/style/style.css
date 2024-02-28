@@ -28,8 +28,9 @@ main{
     width: 100px;
     margin: 7px;
     border-radius: 15px;
-    font-family: "Kanit", sans-serif;
-    font-weight: 700;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 60px;
     cursor: pointer;
 }
@@ -54,24 +55,55 @@ button{
 
 #quit {
     background-color: #1f3540;
+    color: white;
     width: 100px;
     height: 50px;
     border-radius: 15px;
 }
 
 #x {
-    color: #31c4be;
-    font-size: 20px;
+    color: #31c4be;    
+    font-size: 45px;
+
 }
 
 #o {
     color: #f2b237;
-    font-size: 20px;
+    font-size: 45px;
 }
 #xando{
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: flex;
 }
 
-#xando h3 {
-    padding: 0 5px;
+.grid-placar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.scoreboard {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    margin: 7px;
+    border-radius: 15px;
+}
+
+#placarX {
+    background-color: #31c4be;
+}
+
+#placarTie {
+    background-color: #a8bec9;
+}
+
+#placarO{
+    background-color: #f2b237;
 }
