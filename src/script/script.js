@@ -18,13 +18,27 @@ var modo = 1;
 function ModoDupla(){
     modo = 1;
     document.getElementById("modoUm").style.backgroundColor = "#31c4be";
-    document.getElementById("modoDois").style.backgroundColor = "#a8bec9"
+    document.getElementById("modoDois").style.backgroundColor = "#a8bec9";
+    Reset();
+    placarO = 0;
+    placarX = 0;
+    placarTie = 0;
+    document.getElementById("placarX").innerText = "placar x \n" + placarX;
+    document.getElementById("placarTie").innerText = "placar tie \n" + placarTie;
+    document.getElementById("placarO").innerText = "placar o \n" + placarO;
 }
 
 function ModoRobo(){
     modo = 2;
     document.getElementById("modoDois").style.backgroundColor = "#31c4be";
-    document.getElementById("modoUm").style.backgroundColor = "#a8bec9"
+    document.getElementById("modoUm").style.backgroundColor = "#a8bec9";
+    Reset();
+    placarO = 0;
+    placarX = 0;
+    placarTie = 0;
+    document.getElementById("placarX").innerText = "placar x \n" + placarX;
+    document.getElementById("placarTie").innerText = "placar tie \n" + placarTie;
+    document.getElementById("placarO").innerText = "placar o \n" + placarO;
 }
 
 function PlayUm(){
@@ -39,6 +53,7 @@ function PlayUm(){
             }else {
                 jogador = "X"
             }
+            JogadaRobot();
         }else {
             alert("Posição ocupada, escolha novamente.")
   
@@ -59,6 +74,7 @@ function PlayDois() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -78,6 +94,7 @@ function PlayTres() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -97,6 +114,7 @@ function PlayQuatro() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -116,6 +134,7 @@ function PlayCinco() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -135,6 +154,7 @@ function PlaySeis() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -154,6 +174,7 @@ function PlaySete() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -173,6 +194,7 @@ function PlayOito() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -192,6 +214,7 @@ function PlayNove() {
         }else {
             jogador = "X"
         }
+        JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
     }
@@ -209,6 +232,7 @@ function Reset(){
     document.getElementById('sete').innerText = "";
     document.getElementById('oito').innerText = "";
     document.getElementById('nove').innerText = "";
+    jogador = "X";
     jgUm = "";
     jgDois = "";
     jgTres = "";
@@ -313,5 +337,331 @@ function Quit(){
 
 }
 
+function JogadaRobot(){
+if(modo == 2){
+    if(jogador == "O"){
 
-3
+        //123
+        if (jgUm == "O" && jgDois == "O" && jgTres == "") {
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        } else if (jgUm == "O" && jgDois == "" && jgTres == "O") {
+            jgDois = jogador;
+            document.getElementById("dois").innerText = jgDois;
+            jogadas++;
+            jogador = "X";
+        } else if (jgUm == "" && jgDois == "O" && jgTres == "O") {
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++;
+            jogador = "X";
+        }
+
+        //456
+        else if (jgQuatro == "O" && jgCinco == "O" && jgSeis == "") {
+            jgSeis = jogador;
+            document.getElementById("seis").innerText = jgSeis;
+            jogadas++;
+            jogador = "X";
+        } else if (jgQuatro == "O" && jgCinco == "" && jgSeis == "O") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgQuatro == "" && jgCinco == "O" && jgSeis == "O") {
+            jgQuatro = jogador;
+            document.getElementById("quatro").innerText = jgQuatro;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //789
+        
+        else if (jgSete == "O" && jgOito == "O" && jgNove == "") {
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        } else if (jgSete == "O" && jgOito == "" && jgNove == "O") {
+            jgOito = jogador;
+            document.getElementById("oito").innerText = jgOito;
+            jogadas++;
+            jogador = "X";
+        } else if (jgSete == "" && jgOito == "O" && jgNove == "O") {
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //147
+        else if (jgUm == "O" && jgQuatro == "O" && jgSete == "") {
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        } else if (jgUm == "O" && jgQuatro == "" && jgSete == "O") {
+            jgSete = jogador;
+            document.getElementById("dois").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        } else if (jgUm == "" && jgQuatro == "O" && jgSete == "O") {
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //258
+        else if (jgDois == "O" && jgCinco == "O" && jgOito == "") {
+            jgOito = jogador;
+            document.getElementById("oito").innerText = jgOito;
+            jogadas++;
+            jogador = "X";
+        } else if (jgDois == "O" && jgCinco == "" && jgOito == "O") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgDois == "" && jgCinco == "O" && jgOito == "O") {
+            jgDois = jogador;
+            document.getElementById("dois").innerText = jgDois;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //369
+        
+        else if (jgTres == "O" && jgSeis == "O" && jgNove == "") {
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "O" && jgSeis == "" && jgNove == "O") {
+            jgSeis = jogador;
+            document.getElementById("seis").innerText = jgSeis;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "" && jgSeis == "O" && jgNove == "O") {
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //159
+        else if (jgUm == "O" && jgCinco == "O" && jgNove == "") {
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        } else if (jgUm == "O" && jgCinco == "" && jgNove == "O") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgUm == "" && jgCinco == "O" && jgNove == "O") {
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //357
+        
+        else if (jgTres == "O" && jgCinco == "O" && jgSete == "") {
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "O" && jgCinco == "" && jgSete == "O") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "" && jgCinco == "O" && jgSete == "O") {
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        }
+
+        //123
+        else if(jgUm == "X" && jgDois == "X" && jgTres == ""){
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        }else if(jgUm == "X" && jgDois == "" && jgTres == "X"){
+            jgDois = jogador;
+            document.getElementById("dois").innerText = jgDois;
+            jogadas++;
+            jogador = "X";  
+        }else if(jgUm == "" && jgDois == "X" && jgTres == "X"){
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++; 
+            jogador = "X"; 
+        }
+
+        //456
+
+        else if(jgQuatro == "X" && jgCinco == "X" && jgSeis == ""){
+            jgSeis = jogador;
+            document.getElementById("seis").innerText = jgSeis;
+            jogadas++;
+            jogador = "X";
+        }else if(jgQuatro == "X" && jgCinco == "" && jgSeis == "X"){
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;  
+            jogador = "X";
+        }else if(jgQuatro == "" && jgCinco == "X" && jgSeis == "X"){
+            jgQuatro = jogador;
+            document.getElementById("quatro").innerText = jgQuatro;
+            jogadas++; 
+            jogador = "X"; 
+        }
+
+
+        //789
+
+        else if(jgSete == "X" && jgOito == "X" && jgNove == ""){
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        }else if(jgSete == "X" && jgOito == "" && jgNove == "X"){
+            jgOito = jogador;
+            document.getElementById("oito").innerText = jgOito;
+            jogadas++; 
+            jogador = "X"; 
+        }else if(jgSete == "" && jgOito == "X" && jgNove == "X"){
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++; 
+            jogador = "X"; 
+        }
+
+        //147
+        else if(jgUm == "X" && jgQuatro == "X" && jgSete == ""){
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        }else if(jgUm == "X" && jgQuatro == "" && jgSete == "X"){
+            jgSete = jogador;
+            document.getElementById("dois").innerText = jgSete;
+            jogadas++; 
+            jogador = "X"; 
+        }else if(jgUm == "" && jgQuatro == "X" && jgSete == "X"){
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++; 
+            jogador = "X"; 
+        }
+
+        //258
+        else if (jgDois == "X" && jgCinco == "X" && jgOito == "") {
+            jgOito = jogador;
+            document.getElementById("oito").innerText = jgOito;
+            jogadas++;
+            jogador = "X";
+        } else if (jgDois == "X" && jgCinco == "" && jgOito == "X") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgDois == "" && jgCinco == "X" && jgOito == "X") {
+            jgDois = jogador;
+            document.getElementById("dois").innerText = jgDois;
+            jogadas++;
+            jogador = "X";
+        }
+        
+        //369
+
+        else if (jgTres == "X" && jgSeis == "X" && jgNove == "") {
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "X" && jgSeis == "" && jgNove == "X") {
+            jgSeis = jogador;
+            document.getElementById("seis").innerText = jgSeis;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "" && jgSeis == "X" && jgNove == "X") {
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        }
+
+        //159
+        else if(jgUm == "X" && jgCinco == "X" && jgNove == ""){
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        }else if(jgUm == "X" && jgCinco == "" && jgNove == "X"){
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++; 
+            jogador = "X"; 
+        }else if(jgUm == "" && jgCinco == "X" && jgNove == "X"){
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++; 
+            jogador = "X"; 
+        }
+        //357
+
+        else if (jgTres == "X" && jgCinco == "X" && jgSete == "") {
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "X" && jgCinco == "" && jgSete == "X") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "" && jgCinco == "X" && jgSete == "X") {
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        }
+
+          //jg
+          else if(jgCinco == ""){
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        }
+        else if (jgUm == ""){
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++; 
+            jogador = "X";
+        }
+        else if (jgTres == ""){
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++; 
+            jogador = "X";
+        }
+        else if (jgSete == ""){
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++; 
+            jogador = "X";
+        } 
+        VerificationWin();
+    }
+}
+} 
