@@ -257,13 +257,13 @@ function VerificationWin(){
         }
     }
         
-    if(jgQuatro == jgCinco && jgCinco == jgSeis){
+   else if(jgQuatro == jgCinco && jgCinco == jgSeis){
         if(jgQuatro != ""){
             ganhador = jgQuatro;
         }
     }
 
-    if(jgSete == jgOito && jgOito == jgNove){
+    else if(jgSete == jgOito && jgOito == jgNove){
         if(jgSete != ""){     
             ganhador = jgSete;
         }
@@ -273,19 +273,19 @@ function VerificationWin(){
     // 258
     // 369
 
-    if(jgUm == jgQuatro && jgQuatro == jgSete){
+    else if(jgUm == jgQuatro && jgQuatro == jgSete){
         if(jgUm != ""){
             ganhador = jgUm;
         }
     }
 
-    if(jgDois == jgCinco && jgCinco == jgOito){
+    else if(jgDois == jgCinco && jgCinco == jgOito){
         if(jgDois != ""){
             ganhador = jgDois;
         }
     }
 
-    if(jgTres == jgSeis && jgSeis == jgNove){
+    else if(jgTres == jgSeis && jgSeis == jgNove){
         if(jgTres != ""){
             ganhador = jgTres;
         }
@@ -294,13 +294,13 @@ function VerificationWin(){
         // 159
         // 357
 
-    if(jgUm == jgCinco && jgCinco == jgNove){
+    else if(jgUm == jgCinco && jgCinco == jgNove){
         if(jgUm != ""){
             ganhador = jgUm;
         }
     }
 
-    if(jgTres == jgCinco && jgCinco == jgSete){
+    else if(jgTres == jgCinco && jgCinco == jgSete){
         if(jgTres != ""){
             ganhador = jgTres;
         }
