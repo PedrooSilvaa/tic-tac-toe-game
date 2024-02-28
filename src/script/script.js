@@ -305,6 +305,7 @@ function VerificationWin(){
             ganhador = jgTres;
         }
     }
+
     if(ganhador != ""){
         document.getElementById("winner").style.display = 'flex';
         document.getElementById("saida-winner").innerText = "(" + ganhador + ") TAKES THE ROUND";
@@ -404,8 +405,8 @@ if(modo == 2){
             jogadas++;
             jogador = "X";
         } else if (jgUm == "O" && jgQuatro == "" && jgSete == "O") {
-            jgSete = jogador;
-            document.getElementById("dois").innerText = jgSete;
+            jgQuatro = jogador;
+            document.getElementById("quatro").innerText = jgQuatro;
             jogadas++;
             jogador = "X";
         } else if (jgUm == "" && jgQuatro == "O" && jgSete == "O") {
@@ -553,8 +554,8 @@ if(modo == 2){
             jogadas++;
             jogador = "X";
         }else if(jgUm == "X" && jgQuatro == "" && jgSete == "X"){
-            jgSete = jogador;
-            document.getElementById("dois").innerText = jgSete;
+            jgQuatro = jogador;
+            document.getElementById("quatro").innerText = jgQuatro;
             jogadas++; 
             jogador = "X"; 
         }else if(jgUm == "" && jgQuatro == "X" && jgSete == "X"){
