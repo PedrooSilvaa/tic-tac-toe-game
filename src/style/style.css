@@ -103,7 +103,7 @@ button{
     background-color: #f2b237;
 }
 
-#winner {
+#winner, #quiter{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -115,19 +115,25 @@ button{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    display: none;
 }
-.local-winner {
+.local-winner, .local-quiter {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color: #1b2d35;
+    color: white;
     width: 100%;
     height: fit-content;
-    padding: 50px 0;
+    padding: 30px 0;
     
 }
 #winner button {
     background-color: #f2b237;
     width: 300px;
+}
+
+.local-winner  h1, .local-quiter{
+    padding: 20px 0;
 }

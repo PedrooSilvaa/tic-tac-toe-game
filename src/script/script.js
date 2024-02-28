@@ -269,7 +269,8 @@ function VerificationWin(){
         }
     }
     if(ganhador != ""){
-        alert("Parabéns vc foi o vencendor " + ganhador);
+        document.getElementById("winner").style.display = 'flex';
+        document.getElementById("saida-winner").innerText = "(" + ganhador + ") TAKES THE ROUND";
         if(ganhador == "X"){
         placarX++
         document.getElementById("placarX").innerText = "placar x \n" + placarX;
@@ -277,14 +278,25 @@ function VerificationWin(){
         placarO++;
         document.getElementById("placarO").innerText = "placar o \n" + placarO;
         }
-        ganhador = "";
-        Reset();
     }
 
     if(jogadas == 9 & ganhador == ""){
-        alert("Empate");
+        document.getElementById("winner").style.display = 'flex';
+        document.getElementById("paragraph-winner").innerText = "";
+        document.getElementById("saida-winner").innerText = "Tie";
         placarTie++;
         document.getElementById("placarTie").innerText = "placar tie \n" + placarTie;
         Reset();
     }
+}
+
+function Restart (){
+    ganhador = "";
+    Reset();
+    document.getElementById("winner").style.display = 'none';
+}
+
+function Quit(){
+    document.getElementById("quiter").style.display = 'flex';
+
 }

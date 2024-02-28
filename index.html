@@ -14,9 +14,15 @@
     <main>
         <div id="winner">
             <div class="local-winner">
-                <p>YOU WON!</p>
+                <p id="paragraph-winner">YOU WON!</p>
                 <h1 id="saida-winner">X TAKES THE ROUND</h1>
                 <button onclick="Restart()">NEXT ROUND</button>
+            </div>
+        </div>
+        <div id="quiter">
+            <div class="local-quiter">
+                <p>YOU ARE AMAZING!</p>
+                <h1 id="saida-winner">THANK YOU FOR PLAYING MY GAME</h1>
             </div>
         </div>
         <div class="button-superior">
@@ -24,7 +30,7 @@
                 <h3 id="x">X</h3>
                 <h3 id="o">O</h3>
             </div>
-            <button id="quit">Quit</button>
+            <button onclick="Quit()" id="quit">Quit</button>
             <button onclick="Reset()"><i class="fa-solid fa-trash"></i></button>
         </div>
         <div class="grid">
