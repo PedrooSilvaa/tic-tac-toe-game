@@ -18,12 +18,15 @@ function PlayUm(){
             document.getElementById('um').innerText = jgUm;
             if(jogador == "X"){
                 jogador = "O";
+            }else {
+                jogador = "X"
             }
         }else {
             alert("Posição ocupada, escolha novamente.")
   
         }
     console.log("PlayUm clicked");
+    VerificationWin();
 }
 
 function PlayDois() {
@@ -41,6 +44,7 @@ function PlayDois() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayDois clicked");
+    VerificationWin();
 }
 
 function PlayTres() {
@@ -58,6 +62,7 @@ function PlayTres() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayTres clicked");
+    VerificationWin();
 }
 function PlayQuatro() {
     jgQuatro = document.getElementById('quatro').innerText;
@@ -74,6 +79,7 @@ function PlayQuatro() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayQuatro clicked");
+    VerificationWin();
 }
 
 function PlayCinco() {
@@ -91,6 +97,7 @@ function PlayCinco() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayCinco clicked");
+    VerificationWin();
 }
 
 function PlaySeis() {
@@ -108,6 +115,7 @@ function PlaySeis() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlaySeis clicked");
+    VerificationWin();
 }
 
 function PlaySete() {
@@ -125,6 +133,7 @@ function PlaySete() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlaySete clicked");
+    VerificationWin();
 }
 
 function PlayOito() {
@@ -142,6 +151,7 @@ function PlayOito() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayOito clicked");
+    VerificationWin();
 }
 
 function PlayNove() {
@@ -159,6 +169,7 @@ function PlayNove() {
         alert("Posição ocupada, escolha novamente.");
     }
     console.log("PlayNove clicked");
+    VerificationWin();
 }
 
 function Reset(){
@@ -171,6 +182,15 @@ function Reset(){
     document.getElementById('sete').innerText = "";
     document.getElementById('oito').innerText = "";
     document.getElementById('nove').innerText = "";
+    jgUm = "";
+    jgDois = "";
+    jgTres = "";
+    jgQuatro = "";
+    jgCinco = "";
+    jgSeis = "";
+    jgSete = "";
+    jgOito = "";
+    jgNove = "";
 }
 
 function VerificationWin(){
@@ -178,43 +198,64 @@ function VerificationWin(){
     // 123
     // 456
     // 789
-
-    if(jgUm == jgDois && jgDois == jgTres){
-        ganhador == jgUm;
+    if(jgUm != ""){
+        if(jgUm == jgDois && jgDois == jgTres){
+            ganhador = jgUm;
+        }
+    }
+        
+    if(jgQuatro != ""){
+        if(jgQuatro == jgCinco && jgCinco == jgSeis){
+            ganhador = jgQuatro;
+        }
     }
 
-    if(jgQuatro == jgCinco && jgCinco == jgSeis){
-        ganhador == jgQuatro;
-    }
-
-    if(jgSete == jgOito && jgOito == jgNove){
-        ganhador == jgSete;
+    if(jgSete != ""){     
+        if(jgSete == jgOito && jgOito == jgNove){
+            ganhador = jgSete;
+        }
     }
     // p
     // 147
     // 258
     // 369
-    
-    if(jgUm == jgQuatro && jgQuatro == jgSete){
-        ganhador == jgUm;
+
+    if(jgUm != ""){
+        if(jgUm == jgQuatro && jgQuatro == jgSete){
+            ganhador = jgUm;
+        }
     }
 
-    if(jgDois == jgCinco && jgCinco == jgOito){
-        ganhador == jgDois;
+    if(jgDois != ""){
+        if(jgDois == jgCinco && jgCinco == jgOito){
+            ganhador = jgDois;
+        }
     }
 
-    if(jgTres == jgSeis && jgSeis == jgNove){
-        ganhador == jgTres;
+    if(jgTres != ""){
+        if(jgTres == jgSeis && jgSeis == jgNove){
+            ganhador = jgTres;
+        }
     }
-    // c
-    // 159
-    // 357
-    
-    if(jgUm == jgCinco && jgCinco == jgNove){
-        ganhador == jgUm;
+        // c
+        // 159
+        // 357
+
+    if(jgUm != ""){
+        if(jgUm == jgCinco && jgCinco == jgNove){
+            ganhador = jgUm;
+        }
     }
 
-    if(jgTres == jgCinco && jgCinco == jgSete){
-        ganhador == jgTres;
+    if(jgTres != ""){
+        if(jgTres == jgCinco && jgCinco == jgSete){
+            ganhador = jgTres;
+        }
     }
+    if(ganhador != ""){
+        alert("Parabéns vc foi o vencendor " + ganhador)
+        ganhador = "";
+        Reset();
+    }
+
 }
