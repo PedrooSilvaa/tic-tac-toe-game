@@ -13,8 +13,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background-color: #00171f; */
-    background-color: black;
+    background-color: #00171f;
     height: 100vh;
 }
 
@@ -27,8 +26,7 @@ main{
 .box {
     display: grid;
     place-items: center;
-    /* background-color: #1f3540; */
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: #1f3540;
     height: 100px;
     width: 100px;
     margin: 7px;
