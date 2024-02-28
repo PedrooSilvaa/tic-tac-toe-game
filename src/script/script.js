@@ -8,7 +8,8 @@ var jgSeis = "";
 var jgSete = "";
 var jgOito = "";
 var jgNove = "";
-var ganhador = ''
+var ganhador = "";
+var jogadas = 0;
 
 function PlayUm(){
     jgUm = document.getElementById('um').innerText;
@@ -16,6 +17,7 @@ function PlayUm(){
         if(jgUm == ""){
             jgUm = jogador;
             document.getElementById('um').innerText = jgUm;
+            jogadas++;
             if(jogador == "X"){
                 jogador = "O";
             }else {
@@ -35,6 +37,7 @@ function PlayDois() {
     if (jgDois == "") {
         jgDois = jogador;
         document.getElementById('dois').innerText = jgDois;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -53,6 +56,7 @@ function PlayTres() {
     if (jgTres == "") {
         jgTres = jogador;
         document.getElementById('tres').innerText = jgTres;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -64,12 +68,14 @@ function PlayTres() {
     console.log("PlayTres clicked");
     VerificationWin();
 }
+
 function PlayQuatro() {
     jgQuatro = document.getElementById('quatro').innerText;
     console.log(jgQuatro);
     if (jgQuatro == "") {
         jgQuatro = jogador;
         document.getElementById('quatro').innerText = jgQuatro;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -88,6 +94,7 @@ function PlayCinco() {
     if (jgCinco == "") {
         jgCinco = jogador;
         document.getElementById('cinco').innerText = jgCinco;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -106,6 +113,7 @@ function PlaySeis() {
     if (jgSeis == "") {
         jgSeis = jogador;
         document.getElementById('seis').innerText = jgSeis;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -124,6 +132,7 @@ function PlaySete() {
     if (jgSete == "") {
         jgSete = jogador;
         document.getElementById('sete').innerText = jgSete;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -142,6 +151,7 @@ function PlayOito() {
     if (jgOito == "") {
         jgOito = jogador;
         document.getElementById('oito').innerText = jgOito;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -160,6 +170,7 @@ function PlayNove() {
     if (jgNove == "") {
         jgNove = jogador;
         document.getElementById('nove').innerText = jgNove;
+        jogadas++;
         if (jogador == "X") {
             jogador = "O";
         }else {
@@ -191,6 +202,7 @@ function Reset(){
     jgSete = "";
     jgOito = "";
     jgNove = "";
+    jogadas = 0;
 }
 
 function VerificationWin(){
@@ -255,6 +267,11 @@ function VerificationWin(){
     if(ganhador != ""){
         alert("Parabéns vc foi o vencendor " + ganhador)
         ganhador = "";
+        Reset();
+    }
+
+    if(jogadas == 9 & ganhador == ""){
+        alert("Empate");
         Reset();
     }
 

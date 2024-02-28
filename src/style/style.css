@@ -34,9 +34,44 @@ main{
     cursor: pointer;
 }
 
+.button-superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 320px;
+}
+
 button{
+    height: 50px;
+    width: 50px;
     font-size: 20px;
     padding: 10px;
-    background-color: #a8bec9;
-    
+    background-color: #a8bec9; 
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+#quit {
+    background-color: #1f3540;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#x {
+    color: #31c4be;
+    font-size: 20px;
+}
+
+#o {
+    color: #f2b237;
+    font-size: 20px;
+}
+#xando{
+    display: flex;
+}
+
+#xando h3 {
+    padding: 0 5px;
 }
