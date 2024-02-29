@@ -330,6 +330,7 @@ function TrocaJog(){
 
 function JogadaRobot(){
 if(modo == 2){
+    VerificationWin();
     if(jogador == "O"){
         //123
         if (jgUm == "O" && jgDois == "O" && jgTres == "") {
@@ -366,7 +367,6 @@ if(modo == 2){
             jgSeis = jogador;
             document.getElementById("seis").innerText = jgSeis;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -375,7 +375,6 @@ if(modo == 2){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -384,7 +383,6 @@ if(modo == 2){
             jgQuatro = jogador;
             document.getElementById("quatro").innerText = jgQuatro;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -397,7 +395,6 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -406,7 +403,6 @@ if(modo == 2){
             jgOito = jogador;
             document.getElementById("oito").innerText = jgOito;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -415,7 +411,6 @@ if(modo == 2){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -427,7 +422,6 @@ if(modo == 2){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -436,7 +430,6 @@ if(modo == 2){
             jgQuatro = jogador;
             document.getElementById("quatro").innerText = jgQuatro;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -445,7 +438,6 @@ if(modo == 2){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -457,7 +449,6 @@ if(modo == 2){
             jgOito = jogador;
             document.getElementById("oito").innerText = jgOito;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -466,7 +457,6 @@ if(modo == 2){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -475,7 +465,6 @@ if(modo == 2){
             jgDois = jogador;
             document.getElementById("dois").innerText = jgDois;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -488,7 +477,6 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -497,7 +485,6 @@ if(modo == 2){
             jgSeis = jogador;
             document.getElementById("seis").innerText = jgSeis;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -506,7 +493,6 @@ if(modo == 2){
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -518,7 +504,6 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -527,7 +512,6 @@ if(modo == 2){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -536,7 +520,6 @@ if(modo == 2){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -549,7 +532,6 @@ if(modo == 2){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -558,7 +540,6 @@ if(modo == 2){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -567,7 +548,6 @@ if(modo == 2){
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++;
-            jogador = "X";
             TrocaJog();
             VerificationWin();
             tie();
@@ -579,17 +559,26 @@ if(modo == 2){
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgUm == "X" && jgDois == "" && jgTres == "X"){
             jgDois = jogador;
             document.getElementById("dois").innerText = jgDois;
             jogadas++;
-            jogador = "X";  
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot(); 
         }else if(jgUm == "" && jgDois == "X" && jgTres == "X"){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }
 
         //456
@@ -598,17 +587,26 @@ if(modo == 2){
             jgSeis = jogador;
             document.getElementById("seis").innerText = jgSeis;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgQuatro == "X" && jgCinco == "" && jgSeis == "X"){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;  
-            jogador = "X";
+           TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgQuatro == "" && jgCinco == "X" && jgSeis == "X"){
             jgQuatro = jogador;
             document.getElementById("quatro").innerText = jgQuatro;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }
 
 
@@ -618,17 +616,26 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgSete == "X" && jgOito == "" && jgNove == "X"){
             jgOito = jogador;
             document.getElementById("oito").innerText = jgOito;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgSete == "" && jgOito == "X" && jgNove == "X"){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }
 
         //147
@@ -636,17 +643,26 @@ if(modo == 2){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgUm == "X" && jgQuatro == "" && jgSete == "X"){
             jgQuatro = jogador;
             document.getElementById("quatro").innerText = jgQuatro;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }else if(jgUm == "" && jgQuatro == "X" && jgSete == "X"){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+    VerificationWin();
+    tie();
+    JogadaRobot();
         }
 
         //258
@@ -654,17 +670,26 @@ if(modo == 2){
             jgOito = jogador;
             document.getElementById("oito").innerText = jgOito;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgDois == "X" && jgCinco == "" && jgOito == "X") {
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgDois == "" && jgCinco == "X" && jgOito == "X") {
             jgDois = jogador;
             document.getElementById("dois").innerText = jgDois;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
         
         //369
@@ -673,17 +698,26 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgTres == "X" && jgSeis == "" && jgNove == "X") {
             jgSeis = jogador;
             document.getElementById("seis").innerText = jgSeis;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgTres == "" && jgSeis == "X" && jgNove == "X") {
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++;
-            jogador = "X";
+          TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
 
         //159
@@ -691,17 +725,26 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
+           TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }else if(jgUm == "X" && jgCinco == "" && jgNove == "X"){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }else if(jgUm == "" && jgCinco == "X" && jgNove == "X"){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
         //357
 
@@ -709,17 +752,26 @@ if(modo == 2){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++;
-            jogador = "X";
+           TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgTres == "X" && jgCinco == "" && jgSete == "X") {
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgTres == "" && jgCinco == "X" && jgSete == "X") {
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
 
           //jg
@@ -727,17 +779,26 @@ if(modo == 2){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }else if(jgUm == "X" && jgCinco == "" && jgNove == "X"){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }else if(jgUm == "" && jgCinco == "X" && jgNove == "X"){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++; 
-            jogador = "X"; 
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot(); 
         }
         //357
 
@@ -745,17 +806,26 @@ if(modo == 2){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgTres == "X" && jgCinco == "" && jgSete == "X") {
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } else if (jgTres == "" && jgCinco == "X" && jgSete == "X") {
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
 
         
@@ -763,55 +833,82 @@ if(modo == 2){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
         else if (jgUm == ""){
             jgUm = jogador;
             document.getElementById("um").innerText = jgUm;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
         else if (jgTres == ""){
             jgTres = jogador;
             document.getElementById("tres").innerText = jgTres;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         }
         else if (jgNove == ""){
             jgNove = jogador;
             document.getElementById("nove").innerText = jgNove;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } 
         else if (jgSete == ""){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } 
         else if (jgSeis == ""){
             jgSeis = jogador;
             document.getElementById("seis").innerText = jgSeis;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } 
         else if (jgDois == ""){
             jgDois = jogador;
             document.getElementById("dois").innerText = jgDois;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } 
         else if (jgQuatro == ""){
             jgQuatro = jogador;
             document.getElementById("quatro").innerText = jgQuatro;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } 
         else if (jgOito == ""){
             jgOito = jogador;
             document.getElementById("oito").innerText = jgOito;
             jogadas++; 
-            jogador = "X";
+            TrocaJog();
+            VerificationWin();
+            tie();
+            JogadaRobot();
         } 
     }
     } 
