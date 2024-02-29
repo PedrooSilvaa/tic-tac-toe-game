@@ -48,9 +48,9 @@ function PlayUm(){
             jgUm = jogador;
             document.getElementById('um').innerText = jgUm;
             jogadas++;
-            TrocaJog();
             VerificationWin();
-            tie();
+            Tie();
+            TrocaJog();
             JogadaRobot();
         }else {
             alert("Posição ocupada, escolha novamente.")
@@ -66,9 +66,9 @@ function PlayDois() {
         jgDois = jogador;
         document.getElementById('dois').innerText = jgDois;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -83,9 +83,9 @@ function PlayTres() {
         jgTres = jogador;
         document.getElementById('tres').innerText = jgTres;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -100,9 +100,9 @@ function PlayQuatro() {
         jgQuatro = jogador;
         document.getElementById('quatro').innerText = jgQuatro;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -117,9 +117,9 @@ function PlayCinco() {
         jgCinco = jogador;
         document.getElementById('cinco').innerText = jgCinco;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -134,9 +134,9 @@ function PlaySeis() {
         jgSeis = jogador;
         document.getElementById('seis').innerText = jgSeis;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -151,9 +151,9 @@ function PlaySete() {
         jgSete = jogador;
         document.getElementById('sete').innerText = jgSete;
         jogadas++; 
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -168,9 +168,9 @@ function PlayOito() {
         jgOito = jogador;
         document.getElementById('oito').innerText = jgOito;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -185,9 +185,9 @@ function PlayNove() {
         jgNove = jogador;
         document.getElementById('nove').innerText = jgNove;
         jogadas++;
-        TrocaJog();
         VerificationWin();
-        tie();
+        Tie();
+        TrocaJog();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -298,7 +298,7 @@ function ImprimirWin(){
     }
 }
 
-function tie(){
+function Tie(){
     if(jogadas == 9 & ganhador == ""){
         document.getElementById("winner").style.display = 'flex';
         document.getElementById("paragraph-winner").innerText = "";
