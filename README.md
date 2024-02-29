@@ -1,7 +1,7 @@
 https://pedroosilvaa.github.io/tic-tac-toe-game/
 
-![tic-tac-toe-desktop](https://github.com/PedrooSilvaa/tic-tac-toe-game/assets/125162325/5eee536d-e006-4966-802e-26922749575b)
+![tic-tac-toe desktop](https://github.com/PedrooSilvaa/tic-tac-toe-game/assets/125162325/77b5593c-f713-47ab-8faa-d204b0a7631c)
 
+![tic-tac-toe mobile](https://github.com/PedrooSilvaa/tic-tac-toe-game/assets/125162325/3aee27b7-14c0-4210-9384-9d0d9a777526)
 
-![tic-tac-toe-mobile](https://github.com/PedrooSilvaa/tic-tac-toe-game/assets/125162325/4ed42dbc-f8ca-4c6b-8ef4-e7b21f00c1d3)
 
