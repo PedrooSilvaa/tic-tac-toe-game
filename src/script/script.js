@@ -48,12 +48,9 @@ function PlayUm(){
             jgUm = jogador;
             document.getElementById('um').innerText = jgUm;
             jogadas++;
+            TrocaJog();
             VerificationWin();
-            if(jogador == "X"){
-                jogador = "O";
-            }else {
-                jogador = "X"
-            }
+            tie();
             JogadaRobot();
         }else {
             alert("Posição ocupada, escolha novamente.")
@@ -69,12 +66,9 @@ function PlayDois() {
         jgDois = jogador;
         document.getElementById('dois').innerText = jgDois;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -89,12 +83,9 @@ function PlayTres() {
         jgTres = jogador;
         document.getElementById('tres').innerText = jgTres;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -109,12 +100,9 @@ function PlayQuatro() {
         jgQuatro = jogador;
         document.getElementById('quatro').innerText = jgQuatro;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -129,12 +117,9 @@ function PlayCinco() {
         jgCinco = jogador;
         document.getElementById('cinco').innerText = jgCinco;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -149,12 +134,9 @@ function PlaySeis() {
         jgSeis = jogador;
         document.getElementById('seis').innerText = jgSeis;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -168,13 +150,10 @@ function PlaySete() {
     if (jgSete == "") {
         jgSete = jogador;
         document.getElementById('sete').innerText = jgSete;
-        jogadas++;
+        jogadas++; 
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -189,13 +168,9 @@ function PlayOito() {
         jgOito = jogador;
         document.getElementById('oito').innerText = jgOito;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -210,12 +185,9 @@ function PlayNove() {
         jgNove = jogador;
         document.getElementById('nove').innerText = jgNove;
         jogadas++;
+        TrocaJog();
         VerificationWin();
-        if (jogador == "X") {
-            jogador = "O";
-        }else {
-            jogador = "X"
-        }
+        tie();
         JogadaRobot();
     } else {
         alert("Posição ocupada, escolha novamente.");
@@ -237,7 +209,7 @@ function Reset(){
     jgUm = "";
     jgDois = "";
     jgTres = "";
-    jgQuatro = "";
+    jgQuatro = "";  
     jgCinco = "";
     jgSeis = "";
     jgSete = "";
@@ -247,25 +219,25 @@ function Reset(){
 }
 
 function VerificationWin(){
-    // d
-    // 123
-    // 456
-    // 789
+
     if(jgUm == jgDois && jgDois == jgTres){
         if(jgUm != ""){
             ganhador = jgUm;
+            ImprimirWin();
         }
     }
         
    else if(jgQuatro == jgCinco && jgCinco == jgSeis){
         if(jgQuatro != ""){
             ganhador = jgQuatro;
+            ImprimirWin();
         }
     }
 
     else if(jgSete == jgOito && jgOito == jgNove){
         if(jgSete != ""){     
             ganhador = jgSete;
+            ImprimirWin();
         }
     }
     // p
@@ -276,18 +248,21 @@ function VerificationWin(){
     else if(jgUm == jgQuatro && jgQuatro == jgSete){
         if(jgUm != ""){
             ganhador = jgUm;
+            ImprimirWin();
         }
     }
 
     else if(jgDois == jgCinco && jgCinco == jgOito){
         if(jgDois != ""){
             ganhador = jgDois;
+            ImprimirWin();
         }
     }
 
     else if(jgTres == jgSeis && jgSeis == jgNove){
         if(jgTres != ""){
             ganhador = jgTres;
+            ImprimirWin();
         }
     }
         // c
@@ -297,27 +272,33 @@ function VerificationWin(){
     else if(jgUm == jgCinco && jgCinco == jgNove){
         if(jgUm != ""){
             ganhador = jgUm;
+            ImprimirWin();
         }
     }
 
     else if(jgTres == jgCinco && jgCinco == jgSete){
         if(jgTres != ""){
             ganhador = jgTres;
+        ImprimirWin();
         }
     }
+}
 
-    if(ganhador != ""){
+function ImprimirWin(){
+    if(ganhador == "X" || ganhador == "O"){
         document.getElementById("winner").style.display = 'flex';
         document.getElementById("saida-winner").innerText = "(" + ganhador + ") TAKES THE ROUND";
-        if(ganhador == "X"){
-        placarX++
-        document.getElementById("placarX").innerText = "placar x \n" + placarX;
-        }else{
-        placarO++;
-        document.getElementById("placarO").innerText = "placar o \n" + placarO;
-        }
     }
+    if(ganhador == "X"){
+    placarX++
+    document.getElementById("placarX").innerText = "placar x \n" + placarX;
+    }else{
+    placarO++;
+    document.getElementById("placarO").innerText = "placar o \n" + placarO;
+    }
+}
 
+function tie(){
     if(jogadas == 9 & ganhador == ""){
         document.getElementById("winner").style.display = 'flex';
         document.getElementById("paragraph-winner").innerText = "";
@@ -336,13 +317,21 @@ function Restart (){
 
 function Quit(){
     document.getElementById("quiter").style.display = 'flex';
-
 }
 
+function TrocaJog(){
+    if (jogador == "X") {
+        jogador = "O";
+    }else if(jogador == "O"){
+        jogador = "X";
+    }
+}
+
+
 function JogadaRobot(){
+    VerificationWin();
 if(modo == 2){
     if(jogador == "O"){
-
         //123
         if (jgUm == "O" && jgDois == "O" && jgTres == "") {
             jgTres = jogador;
@@ -639,7 +628,43 @@ if(modo == 2){
         }
 
           //jg
-          else if(jgCinco == ""){
+          else if(jgUm == "X" && jgCinco == "X" && jgNove == ""){
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++;
+            jogador = "X";
+        }else if(jgUm == "X" && jgCinco == "" && jgNove == "X"){
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++; 
+            jogador = "X"; 
+        }else if(jgUm == "" && jgCinco == "X" && jgNove == "X"){
+            jgUm = jogador;
+            document.getElementById("um").innerText = jgUm;
+            jogadas++; 
+            jogador = "X"; 
+        }
+        //357
+
+        else if (jgTres == "X" && jgCinco == "X" && jgSete == "") {
+            jgSete = jogador;
+            document.getElementById("sete").innerText = jgSete;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "X" && jgCinco == "" && jgSete == "X") {
+            jgCinco = jogador;
+            document.getElementById("cinco").innerText = jgCinco;
+            jogadas++;
+            jogador = "X";
+        } else if (jgTres == "" && jgCinco == "X" && jgSete == "X") {
+            jgTres = jogador;
+            document.getElementById("tres").innerText = jgTres;
+            jogadas++;
+            jogador = "X";
+        }
+
+        
+        else if(jgCinco == ""){
             jgCinco = jogador;
             document.getElementById("cinco").innerText = jgCinco;
             jogadas++;
@@ -657,14 +682,42 @@ if(modo == 2){
             jogadas++; 
             jogador = "X";
         }
+        else if (jgNove == ""){
+            jgNove = jogador;
+            document.getElementById("nove").innerText = jgNove;
+            jogadas++; 
+            jogador = "X";
+        } 
         else if (jgSete == ""){
             jgSete = jogador;
             document.getElementById("sete").innerText = jgSete;
             jogadas++; 
             jogador = "X";
         } 
+        else if (jgSeis == ""){
+            jgSeis = jogador;
+            document.getElementById("seis").innerText = jgSeis;
+            jogadas++; 
+            jogador = "X";
+        } 
+        else if (jgDois == ""){
+            jgDois = jogador;
+            document.getElementById("dois").innerText = jgDois;
+            jogadas++; 
+            jogador = "X";
+        } 
+        else if (jgQuatro == ""){
+            jgQuatro = jogador;
+            document.getElementById("quatro").innerText = jgQuatro;
+            jogadas++; 
+            jogador = "X";
+        } 
+        else if (jgOito == ""){
+            jgOito = jogador;
+            document.getElementById("oito").innerText = jgOito;
+            jogadas++; 
+            jogador = "X";
+        } 
     }
-    
-    VerificationWin();
+    } 
 }
-} 
